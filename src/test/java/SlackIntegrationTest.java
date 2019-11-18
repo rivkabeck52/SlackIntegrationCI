@@ -10,6 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @RunWith(JUnit4.class)
 public class SlackIntegrationTest {
@@ -34,6 +35,8 @@ public class SlackIntegrationTest {
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
         // Create our web driver
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         driver = new ChromeDriver();
     }
 

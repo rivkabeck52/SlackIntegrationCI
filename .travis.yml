@@ -11,8 +11,10 @@ before_script:
   - sudo chmod +x /usr/local/bin/chromedriver
 addons:
   apt:
+    sources:
+      - google-chrome
     packages:
-      - libgconf-2-4
+      - google-chrome-stable
 install: true
 script:
   - mvn install
