@@ -6,8 +6,9 @@ addons:
   apt:
     packages:
       - libgconf-2-4
+install: true
 script:
+  - mvn install
   - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
   - echo $APPLITOOLS_BATCH_ID
-  - mvn clean install
   - mvn -DTest=SlackIntegrationTest test
