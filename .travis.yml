@@ -1,7 +1,10 @@
 # don't build tags, it's redundant
 if: tag IS blank
 language: java
-java:
+before_script:
+  - wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python2.7.12/bin/
+  - export CHROME_BIN=chromium-browser
 addons:
   apt:
     packages:
