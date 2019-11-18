@@ -20,6 +20,7 @@ public class SlackIntegrationTest {
 
     @BeforeClass
     public static void setBatch() {
+//        System.setProperty('webdriver.chrome.driver', '/path/to/chromedriver');
         batch = new BatchInfo("Hello World");
 
     }
@@ -28,6 +29,7 @@ public class SlackIntegrationTest {
     public void beforeEach() {
         eyes = new Eyes();
         eyes.setBatch(batch);
+
         // Get Applitools API key from an environment variable
         eyes.setApiKey(System.getenv("APPLITOOLS_API_KEY"));
 
