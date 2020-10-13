@@ -59,7 +59,7 @@
                     <artifactId>testng</artifactId>
                 </exclusion>
             </exclusions>
-            <version>4.12</version>
+            <version>4.13.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
